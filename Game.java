@@ -51,7 +51,7 @@ public static void main(String[] args) {
 public static int calculateAge(int birthYear)
 {
 
-    return 2022-birthYear;
+    return 2022-birthYear; //Test for Github
     
 }
 }
