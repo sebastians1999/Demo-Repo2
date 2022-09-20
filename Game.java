@@ -39,9 +39,7 @@ public static void main(String[] args) {
    "justice.\n"; 
    System.out.print(text);
    
-   System.out.print("\n\nWhat do you would like to do?\n");
-   String answer = scanner.nextLine(); 
-   System.out.print("\n"+answer+"\n");
+
 
    getInput();
 
@@ -59,12 +57,11 @@ public static String getInput()
 {
     boolean valid = false;
     scanner = new Scanner(System.in);
-
-
+    String Input ="";
     while(valid==false)
     {
         System.out.println("\nWhat would do you like to do?");
-        String Input = scanner.nextLine();
+        Input = scanner.nextLine();
         if(("Open the door".equals(Input))||("Go north".equals(Input))||("Go east".equals(Input))||("Go south".equals(Input))||("Go west".equals(Input))||("Take item".equals(Input))||("Drop item".equals(Input))||("Use item".equals(Input)))
         {
             System.out.println("\n"+Input);
