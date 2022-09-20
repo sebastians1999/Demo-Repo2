@@ -43,6 +43,8 @@ public static void main(String[] args) {
    String answer = scanner.nextLine(); 
    System.out.print("\n"+answer+"\n");
 
+   getInput();
+
 
 
 
@@ -50,16 +52,31 @@ public static void main(String[] args) {
 }
 public static int calculateAge(int birthYear)
 {
+    return 2022-birthYear;   
+}
 
-    return 2022-birthYear; //Test for Github !!!
+public static String getInput()
+{
+    boolean valid = false;
+    scanner = new Scanner(System.in);
+    String Input = " ";
 
-    //Github Test 3
-    //bla
-    //bla
-    //bla
-    //bla 
-    //bla
-    
+
+    while(valid==false)
+    {
+        System.out.println("\nWhat would do you like to do?");
+        Input = scanner.nextLine();
+        if(("Open the door".equals(Input))||("Go north".equals(Input))||("Go east".equals(Input))||("Go south".equals(Input))||("Go west".equals(Input))||("Take item".equals(Input))||("Drop item".equals(Input))||("Use item".equals(Input)))
+        {
+            System.out.println("\n"+Input);
+            valid=true;
+        }
+        else
+        {
+            System.out.println("\nInvalid Input");
+        }
+    }
+    return Input;
 }
 }
 
