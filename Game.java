@@ -59,13 +59,12 @@ public static String getInput()
 {
     boolean valid = false;
     scanner = new Scanner(System.in);
-    String Input = " ";
 
 
     while(valid==false)
     {
         System.out.println("\nWhat would do you like to do?");
-        Input = scanner.nextLine();
+        String Input = scanner.nextLine();
         if(("Open the door".equals(Input))||("Go north".equals(Input))||("Go east".equals(Input))||("Go south".equals(Input))||("Go west".equals(Input))||("Take item".equals(Input))||("Drop item".equals(Input))||("Use item".equals(Input)))
         {
             System.out.println("\n"+Input);
