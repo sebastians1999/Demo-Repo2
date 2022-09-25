@@ -44,7 +44,7 @@ public static void main(String[] args) {
     System.out.print(text);
 
      while(stateID!=666){
-        stateID = takeAction(stateID,getInput());
+        stateID = takeAction(getInput(),stateID);
         printState(stateID);
     }
    
@@ -63,26 +63,26 @@ public static String getInput()
     String Input ="";
     while(valid==false)
     {
-        System.out.println("\nWhat would do you like to do?");
+        System.out.println("What would do you like to do?");
         Input = scanner.nextLine();
-        Input.toLowerCase();
+        Input = Input.toLowerCase();
         if(("quit".equals(Input))||("open the door".equals(Input))||("go north".equals(Input))||("go east".equals(Input))||("go south".equals(Input))||("go west".equals(Input))||("take item".equals(Input))||("drop item".equals(Input))||("use item".equals(Input)))
         {
-            System.out.println("\n"+Input);
+            System.out.println(Input);
             valid=true;
         }
         else
         {
-            System.out.println("\nInvalid Input");
+            System.out.println("Invalid Input");
         }
     }
     return Input;
 }
 
-public static int takeAction(int currentState,String action){
+public static int takeAction(String action, int currentState){
 
 
-if(action.equals("open the door")){
+if(action.equals("quit")){
     currentState = 666;
 }
 else if(currentState==0 && action.equals("open the door")){
@@ -125,7 +125,7 @@ public static void printState(int currentState){
         "greets you with a friendly “hello”, nice. You hold the calculator in your hand.");
     }
     else if(currentState==3){
-        System.out.println(" The man greets you and starts endlessly talking to you about his children"+ 
+        System.out.println("The man greets you and starts endlessly talking to you about his children"+ 
         "and his holiday to Benidorm. You die of boredom");
     }
 }
